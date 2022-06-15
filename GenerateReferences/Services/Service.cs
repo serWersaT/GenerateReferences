@@ -14,7 +14,7 @@ namespace GenerateReferences.Services
 {
     public class Service
     {
-        string conn = "DefaultEndpointsProtocol=https;AccountName=backupmasterdevversion1;AccountKey=NnRCXPcqzUiWhu/Exe4WAXJ20f0THwMdr8yblgR2WNs68FRq/KYhUHvdj4vBYkYTmk6+W79Vkgkv6R41zytjAw==;EndpointSuffix=core.windows.net";
+        string conn = "";
 
         public string Commands(string command)
         {
@@ -38,7 +38,7 @@ namespace GenerateReferences.Services
             return blb;
         }
 
-        private static string GetServiceSasUriForBlob(BlobClient blobClient, string storedPolicyName = null)
+        private string GetServiceSasUriForBlob(BlobClient blobClient, string storedPolicyName = null)
         {
             if (blobClient.CanGenerateSasUri)
             {

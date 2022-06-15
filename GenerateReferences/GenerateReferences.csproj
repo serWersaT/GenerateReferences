@@ -120,7 +120,6 @@
   <ItemGroup>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Services\AttachmentFileRepository.cs" />
     <Compile Include="Services\Service.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -12,9 +12,14 @@ namespace GenerateReferences
         static void Main(string[] args)
         {
             Service service = new Service();
+            OldService oldservice = new OldService();
 
             Console.WriteLine("Введите команду:");
-            service.Commands(Console.ReadLine());
+            //var reference = service.Commands(Console.ReadLine());
+            var reference = oldservice.Commands(Console.ReadLine());
+
+            Console.WriteLine(reference);
+
             Console.ReadLine();
         }
 

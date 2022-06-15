@@ -51,7 +51,7 @@ namespace GenerateReferences.Services
 
                 if (storedPolicyName == null)
                 {
-                    sasBuilder.ExpiresOn = DateTimeOffset.UtcNow.AddMinutes(1);
+                    sasBuilder.ExpiresOn = DateTimeOffset.UtcNow.AddDays(1);
                     sasBuilder.SetPermissions(BlobSasPermissions.Read |
                                    BlobSasPermissions.Write);
                 }

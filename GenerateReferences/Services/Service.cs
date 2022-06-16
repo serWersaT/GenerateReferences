@@ -14,13 +14,14 @@ namespace GenerateReferences.Services
 {
     public class Service
     {
-        string conn = "";
+        string conn = "DefaultEndpointsProtocol=https;AccountName=backupmasterdevversion1;AccountKey=NnRCXPcqzUiWhu/Exe4WAXJ20f0THwMdr8yblgR2WNs68FRq/KYhUHvdj4vBYkYTmk6+W79Vkgkv6R41zytjAw==;EndpointSuffix=core.windows.net";
+        string name = "democontainer";
 
         public string Commands(string command)
         {
             switch (command)
             {
-                case "new reference":
+                case "test":
                     return GetServiceSasUriForBlob(newblob());
             }
 
@@ -34,7 +35,7 @@ namespace GenerateReferences.Services
 
         private BlobClient newblob()
         {
-            BlobClient blb = new BlobClient(conn, "backupexport", "SuperTest");
+            BlobClient blb = new BlobClient(conn, name, "SuperTest");
             return blb;
         }
 
@@ -51,7 +52,7 @@ namespace GenerateReferences.Services
 
                 if (storedPolicyName == null)
                 {
-                    sasBuilder.ExpiresOn = DateTimeOffset.UtcNow.AddDays(1);
+                    sasBuilder.ExpiresOn = DateTimeOffset.UtcNow.AddMinutes(1);
                     sasBuilder.SetPermissions(BlobSasPermissions.Read |
                                    BlobSasPermissions.Write);
                 }

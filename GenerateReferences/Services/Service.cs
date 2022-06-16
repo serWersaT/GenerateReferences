@@ -14,8 +14,8 @@ namespace GenerateReferences.Services
 {
     public class Service
     {
-        string conn = "DefaultEndpointsProtocol=https;AccountName=backupmasterdevversion1;AccountKey=NnRCXPcqzUiWhu/Exe4WAXJ20f0THwMdr8yblgR2WNs68FRq/KYhUHvdj4vBYkYTmk6+W79Vkgkv6R41zytjAw==;EndpointSuffix=core.windows.net";
-        string name = "democontainer";
+        string conn = "";
+        string name = "";
 
         public string Commands(string command)
         {
